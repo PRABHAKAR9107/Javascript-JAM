@@ -35,3 +35,33 @@ console.log(b == c); //false
 console.log(b === c); //false
 
 //comparing 2 objects is always false, because they are different objects.Even though both c and b are objects with same values
+
+//String methods
+
+//string length:- length of the string ,how many characters,including spaces
+
+//syntax:- stringName.length
+
+let str = "hello How are you?";
+console.log(str.length);
+
+//Find position of a string or substring in a string:
+
+//indexOf("Substring"):-Index position of the given sub string,case sensitive
+
+//Javascript counts position from 0, so in the following string:
+
+let x = "welcome to JavaScript";
+console.log(x.indexOf("JavaScript")); //11
+console.log(x.indexOf("javascript")); //-1 case sensitive
+console.log(x.indexOf("hello")); //-1 different substring
+
+x = "welcome to javascript javascript javascript";
+let y = x.indexOf("javascript", -1);
+console.log(y); //22 because the search starts from 12, so the first occurrence of the given substring.
+
+//lastIndexOf("substring"):- return the last occurrence of the given string .
+
+y = x.lastIndexOf("javascript");
+
+console.log(y);
