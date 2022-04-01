@@ -193,9 +193,9 @@ console.log(typeof j); //string
 //number written in a specified length
 //can give entire number's length
 
-let k = 65.132184;
+let k = 65.632184;
 
-let l = k.toPrecision(2); //65
+let l = k.toPrecision(2); //66
 
 console.log(l);
 
@@ -203,3 +203,135 @@ l = k.toPrecision(4);
 console.log(l); //65.13
 
 console.log(typeof l); //string
+
+//Converting other types to numbers
+
+//Number Methods
+
+//Number() method returns a number converted from the string. Just that. It can be used to convert Boolean values to numbers as well.
+
+let m = 50 + l;
+
+console.log(m); //string
+
+m = 50 + Number(l);
+
+console.log(m); //number
+
+console.log(
+  Number("10") +
+    "\n" +
+    Number(true) +
+    "\n" +
+    Number(false) +
+    "\n" +
+    Number(" 10 ") +
+    "\n" +
+    Number("Hello") +
+    "\n" +
+    Number(" 203 ") +
+    "\n" +
+    Number("20 3")
+);
+
+//convert date to number -value of the number of milliseconds passed since 1.11970 till the date you give
+
+//Year-Month-Day
+
+let n = new Date("2022-3-29");
+
+console.log(typeof n); //object
+
+n = Number(new Date("2022-3-29"));
+
+console.log(n); //1648492200000
+
+n = Number(new Date("1969-3-29"));
+console.log(n);
+
+//parseInt & parseFloat
+
+//similar to the number method -spaces are allowed in parseInt
+
+//parseInt -whole number -decimals numbers still convert to whole number
+console.log(
+  parseFloat("2.4552") +
+    "\n" +
+    parseFloat("568") +
+    "\n" +
+    parseFloat("55 97") +
+    "\n" +
+    parseFloat(" 10.004 ") +
+    "\n" +
+    parseFloat("Hello 20") +
+    "\n" +
+    parseFloat(" 20 Hello")
+);
+
+// It doesn’t matter if a number has space around it.
+// If the first instance of the string is a word or a letter, it’ll return NaN.
+// If the first occurrence of the string is a number, it doesn’t matter if the subsequent occurrences are letters, it’ll convert that first number and leave it at that.
+
+//parseFloat Method
+
+//parseFloat converts a number to a decimal point or floating point number.
+
+console.log(
+  parseFloat("2.4552") +
+    "\n" +
+    parseFloat("568") +
+    "\n" +
+    parseFloat("55 97") +
+    "\n" +
+    parseFloat(" 10.004 ") +
+    "\n" +
+    parseFloat("Hello 20") +
+    "\n" +
+    parseFloat(" 20 Hello")
+);
+
+//More properties and methods
+
+//properties- finding max value,min value etc...
+
+//maximum possible value accepted by javascript and vice versa- Infinity,-Inf
+
+console.log(
+  "Max value: " +
+    Number.MAX_VALUE +
+    "\n" +
+    "Min value: " +
+    Number.MIN_VALUE +
+    "\n"
+);
+
+console.log(
+  "Max value: " +
+    Number.MAX_VALUE +
+    "\n" +
+    "Min value: " +
+    Number.MIN_VALUE +
+    "\n" +
+    "Negative infinity: " +
+    Number.NEGATIVE_INFINITY +
+    "\n" +
+    "Positive infinity: " +
+    Number.POSITIVE_INFINITY +
+    "\n" +
+    "Not a Number: " +
+    Number.NaN
+);
+
+let q = 100;
+
+console.log(q.MAX_VALUE); //undefined
+
+//You can’t use these properties on variables though. You’ll get an undefined. These can only be used on Number, because it returns values that are predefined.
+
+Number.isFinite(100); //true
+
+//depending on if a number is finite or not. Returns true if number is a number and is finite.
+
+Number.isInteger(100); //true
+
+//if number does not have decimal points and is a number
