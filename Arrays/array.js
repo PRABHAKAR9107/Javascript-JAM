@@ -288,3 +288,7 @@ arr8.sort(function (a, b) {
 console.log(arr8);
 
 //Read that article https://www.w3schools.com/js/js_array_sort.asp
+
+
+
+
