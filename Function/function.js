@@ -353,3 +353,50 @@ sum += a;
 
 
 */
+
+//Scheduling functions executions -user defined ,pre-defined
+
+//Run them after a delay- keep running them after timed delays
+
+//setTimeout- runs a function after a set time delay.
+
+//setTimeout(functionName, delayInMilliSeconds, arg1, arg2, ….);
+
+//Give the delay in milliseconds. So, if you need the function to run after a delay of 1 second, your 2nd argument should be 1000.
+
+function helloThere() {
+  console.log("hello there,Hello there!");
+}
+
+setTimeout(helloThere, 5000);
+
+function helloName(name) {
+  console.log("Hello" + " " + name);
+}
+
+setTimeout(helloName, 5000, "Prabhakar");
+
+//pre-defined functions like alerts from within the setTimeout call.
+
+setTimeout("console.log('Hello there!')", 2000);
+
+//You can give the same as an arrow function
+
+setTimeout(() => console.log("Hello there!"), 2000);
+
+let tr = setTimeout(() => console.log("Hello Prabhu!"), 2000);
+console.log(tr);
+clearTimeout(tr);
+
+//setInterval-keeps  calling the function after every timed delay-keep calling the function every 2 seconds.
+
+//syntax:- setInterval(functionName, delayInMilliSeconds, arg1, arg2, ….);
+
+let count = 0;
+let trr = setInterval(() => console.log(++count + " alert"), 2000);
+// console.log("trr is", trr);
+
+setTimeout(() => {
+  clearInterval(trr);
+  console.log("stopped");
+}, 10000);
