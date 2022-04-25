@@ -80,3 +80,58 @@ let reduceArr = array1.reduce((acc, num) => {
 }, 5);
 
 console.log(reduceArr);
+
+//Array Destructuring
+
+var arr6 = ["Hello", "World"];
+
+// destructuring assignment
+var [first, second] = 6;
+
+console.log(first); // Hello
+console.log(second); // World
+
+var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];
+
+// destructuring assignment
+var [color1, color2, color3] = colors;
+
+console.log(color1); // Violet
+console.log(color2); // Indigo
+console.log(color3); // Blue
+
+var [color1, , color3, , color5] = colors; //Leave space for unpick elements
+console.log(color1); // Violet
+console.log(color3); // Blue
+console.log(color5); // Yellow
+
+//Array destructuring and Rest operator
+
+var [a, b, ...args] = colors;
+console.log(a);
+console.log(b);
+console.log(args);
+
+//Array destructuring and Default values
+
+var x, y;
+
+[x = 50, y = 70] = [100];
+console.log(x); // 100
+console.log(y); // 70
+
+[x, y] = [y, x];
+console.log(x); // 200
+console.log(y); // 100
+
+//Parsing returned array from functions
+
+function array() {
+  return [100, 200, 300];
+}
+
+var [x, y, z] = array();
+
+console.log(x); // 100
+console.log(y); // 200
+console.log(z); // 300
