@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <center style="font-size: 2em">Advanced objects in ES6</center>
+
+    <h3>Pass by Value vs Pass By Reference</h3>
+    <details>
+      <summary>Difference Between Pass by Value vs Pass By Reference:-</summary>
+
+      <h4>
+        In JavaScript primitive types are passed around as values: meaning that
+        each time a value is assigned, a copy of that value is created.
+        <br />
+        On the other side objects (including plain objects, array, functions,
+        class instances) are references. If you modify the object, then all
+        variables that reference that object are going to see the change.
+      </h4>
+    </details>
+
+    <div class="image">
+      <img
+        src="https://dmitripavlutin.com/static/8867fc81ffb36b8ef3d0d2a8e22a7d2d/7c84e/values-2.webp"
+        alt=""
+      />
+
+      <img
+        src="https://dmitripavlutin.com/static/21075d0959751add1730239d141bbe87/42163/references-2.png"
+        alt=""
+        height="330px"
+      />
+    </div>
+
+    <h3>Type Coercion</h3>
+    <h4>There are following websites to watch about it</h4>
+
+    <ul>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+          target="_blank"
+        >
+          Equality comparisons and sameness</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://dorey.github.io/JavaScript-Equality-Table/"
+          target="_blank"
+        >
+          Dorey GitHub
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://262.ecma-international.org/5.1/#sec-11.9.3"
+          target="_blank"
+        >
+          The Abstract Equality Comparison Algorithm</a
+        >
+      </li>
+    </ul>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
