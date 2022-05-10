@@ -45,3 +45,6 @@ rohan = new Programmer("Rohan", 3, "Lays", "Go", "Rohan420");
 console.log(rohan);
 console.log(rohan.favoriteLanguage());
 console.log(Programmer.multiply(5, 7));
+
+//static methods are called directly on the class
+console.log(rohan.multiply(5, 7)); //type error
