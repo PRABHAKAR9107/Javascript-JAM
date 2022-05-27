@@ -17,12 +17,12 @@ function makeFunc() {
   function displayName() {
     console.log(name);
   }
-  //displayName();
-  return displayName;
+  displayName();
+  // return displayName;
 }
 
 var myFunc = makeFunc();
-myFunc();
+// myFunc();
 
 console.log(myFunc);
 
@@ -43,15 +43,24 @@ function sump(a) {
     };
   };
 }
+
+// function sump(a) {
+//   return function sum1(b) {
+//     return function sum2(c) {
+//       return a + b + c;
+//     };
+//   };
+// }
 console.log(sump(1)(2)(3));
+const sum1 = sump(1);
+const sum2 = sum1(2);
+const result1 = sum2(3);
+console.log(result1);
 
 //We could separate this sum(1)(2)(3) to understand it better:
 
 /*
-const sum1 = sum(1);
-const sum2 = sum1(2);
-const result = sum2(3);
-console.log(result); // 6
+ // 6
 Let’s get to know how it works:
 We passed 1 to the sum function:
 let sum1 = sum(1);
@@ -109,6 +118,7 @@ console.log(newAdd(5, 10));
 const addTo = (x) => (y) => x + y;
 var addToTen = addTo(10);
 console.log(addToTen(3));
+console.log(addTo(10)(3));
 
 //Solution is 13
 

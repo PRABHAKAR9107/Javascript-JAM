@@ -18,7 +18,7 @@ let place = function (city, country) {
   //   console.log(this.name);
   console.log(`${this.name} is from ${city} in ${country}`);
 };
-// console.log(place.call(employee, "Delhi", "India"));
+console.log(place.call(employee, "Delhi", "India"));
 
 place.apply(employee, ["Delhi", "India"]);
 
@@ -38,6 +38,6 @@ console.log(employee.sayHello.call(otherEmployee));
 
 place.apply(otherEmployee, ["Delhi", "India"]);
 
-let newEmployee = place.bind(employee, "Delhi", "India");
+let newEmployee = employee.bind(place, "Delhi", "India");
 
-newEmployee();
+console.log(newEmployee());

@@ -152,6 +152,11 @@ console.log("5" == "hello"); //false Converts both to number, but “hello” is
 
 console.log(5 > ""); //true
 
+console.log("5" < "15"); //false
+
+// when converting strings to number, 5 is greater tan 15 because 1 is lesser than 5 and that’ll be the first comparison made.
+// That is, 1 vs 5 will be the first comparison made and the output will be based on that, not like with full numbers.
+
 //Logical operators
 
 // Used to determine the logic between two variables or values.

@@ -20,11 +20,14 @@ console.log("\\ is called a backspace");
 
 //Best way to go around this.By using backtick(` `) method
 
-console.log(`Hello Namaste /\\ ,How are you?`);
+console.log(`Hello Bro /\\ ,How are you?`);
 
 // Creating strings as objects
 
 let b = new String("hello"); //object
+console.log(b); //{"hello"}
+
+console.log(b[0]); //h
 let c = "hello"; //string
 console.log(b == c); //true they are same value
 console.log(b === c); //false they are different types.
@@ -58,7 +61,7 @@ console.log(x.indexOf("hello")); //-1 different substring
 
 x = "welcome to javascript javascript javascript";
 let y = x.indexOf("javascript", 15);
-console.log(y); //22 because the search starts from 12, so the first occurrence of the given substring.
+console.log(y); //22 because the search starts from 15, so the first occurrence of the given substring.
 
 //lastIndexOf("substring"):- return the last occurrence of the given string .
 

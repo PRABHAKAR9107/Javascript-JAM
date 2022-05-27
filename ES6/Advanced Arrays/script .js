@@ -1,3 +1,4 @@
+"use strict";
 //Advanced Arrays
 
 //forEach(parameters):-
@@ -7,6 +8,54 @@ The forEach Javascript array method is used to iterate through an array and then
 The forEach method accepts a callback function as its first parameter.
 
 */
+
+function double(x) {
+  return x * 2;
+}
+
+let number1 = [8, 9, 7, 5];
+
+let doubleValue = number1.map(double);
+// let doubleValue = number1.map(function double(x) {
+//   return x;
+// });
+console.log(doubleValue);
+
+//filter odd value inside the array
+
+let oddValue = number1.filter((x, i, array) => {
+  console.log(i);
+  console.log(array);
+
+  return x % 2 != 0;
+});
+
+console.log(oddValue);
+
+//reduce:- takes two arguments second callback function and first accumalator
+
+let array3 = [5, 9, 6, 7];
+
+function findSum(array3) {
+  let sum = 0;
+
+  for (let i = 0; i < array3.length; i++) {
+    sum = sum + array3[i];
+  }
+  return sum;
+}
+console.log(findSum(array3));
+
+const array4 = array3.reduce((acc, current, i, array4) => {
+  console.log(current);
+  console.log(i);
+  console.log(array4);
+  return acc + current;
+}, 0);
+
+console.log(array4);
+
+//accumalator acts as sum value which is declared.
 
 let skills = ["HTML", "CSS", "Javascript"];
 
@@ -86,10 +135,10 @@ console.log(reduceArr);
 var arr6 = ["Hello", "World"];
 
 // destructuring assignment
-var [first, second] = 6;
+// var [first, second] = 6;
 
-console.log(first); // Hello
-console.log(second); // World
+// console.log(first); // Hello
+// console.log(second); // World
 
 var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];
 
@@ -135,3 +184,73 @@ var [x, y, z] = array();
 console.log(x); // 100
 console.log(y); // 200
 console.log(z); // 300
+
+const posts = [
+  {
+    id: 1,
+    title: "Hello World",
+    content: "Welcome to learning React!",
+    age: 5,
+  },
+  {
+    id: 2,
+    title: "Installation",
+    content: "You can install React from npm.",
+    age: 6,
+  },
+
+  {
+    id: 3,
+    title: "Installation",
+    content: "You can install React from npm.",
+    age: 6,
+  },
+  {
+    id: 4,
+    title: "Installation",
+    content: "You can install React from npm.",
+    age: 5,
+  },
+];
+//age={7:1,6:2,5:1}
+
+const findAge = posts.reduce(function (acc, curr) {
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+
+console.log(findAge);
+
+const output = posts.filter((x) => x.age < 6).map((x) => x.title);
+
+console.log(output);
+
+const findTitle = posts.reduce(function (acc, curr) {
+  if (curr.age < 6) {
+    // acc = curr.title;
+    acc.push(curr.title);
+  }
+  return acc;
+}, []);
+
+console.log(findTitle);
+
+const arry2 = [1, 2, 1, 3, 4, 3, 5];
+
+// function tip(item) {
+//   return;
+// }
+
+const toFindDuplicates = arry2.filter((item, index, arry2) => {
+  console.log(arry2.indexOf(item));
+
+  // console.log(index);
+
+  return arry2.indexOf(item) !== index;
+});
+const duplicateElements = toFindDuplicates;
+console.log(duplicateElements);

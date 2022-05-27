@@ -174,6 +174,8 @@ const myBoys = ["Emil", "Tobias", "Linus"];
 
 let myChildren = myGirls.concat(myBoys);
 
+console.log(myChildren);
+
 //The concat() method does not change the existing arrays. It always returns a new array.
 
 //The concat() method can take any number of array arguments:
@@ -288,7 +290,3 @@ arr8.sort(function (a, b) {
 console.log(arr8);
 
 //Read that article https://www.w3schools.com/js/js_array_sort.asp
-
-
-
-
