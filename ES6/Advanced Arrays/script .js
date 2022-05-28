@@ -254,3 +254,26 @@ const toFindDuplicates = arry2.filter((item, index, arry2) => {
 });
 const duplicateElements = toFindDuplicates;
 console.log(duplicateElements);
+
+var arr5 = [
+  { id: 1, name: "test1" },
+  { id: 2, name: "test2" },
+  { id: 2, name: "test3" },
+  { id: 3, name: "test4" },
+  { id: 4, name: "test4" },
+  { id: 5, name: "test6" },
+  { id: 5, name: "test7" },
+  { id: 6, name: "test8" },
+];
+
+var filteredArr = arr5.reduce((acc, current) => {
+  var x = acc.find(
+    (item) => item.id === current.id || item.name === current.name
+  );
+  if (!x) {
+    return acc.concat([current]);
+  } else {
+    return acc;
+  }
+}, []);
+console.log(filteredArr);
