@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL-Redirect</title>
+  </head>
+  <body>
+    <center>
+      <h3>Reload current Page,Current Url,Redirect to another webpage</h3>
+    </center>
+
+    <div>
+      <h5>
+        Hello user , your current webpage url is :-
+        <h5 id="current-url"></h5>
+      </h5>
+
+      <button onclick="currentUrl()">URL</button>
+    </div>
+
+    <div>
+      <h5>
+        Location object has a reload() method using which you can reload the
+        current web page:- location.reload();
+        <ul>
+          <li>
+            If you pass true to the reload() method, then it will force the
+            browser to reload the web page from the server.
+          </li>
+          <li>location.reload(true);</li>
+          <li>
+            On the other hand, if you pass false or don't pass anything to the
+            reload() method, the browser might reload the page from the cache.
+          </li>
+        </ul>
+        <br />
+        Click the button and reload the Page
+        <h5 id="reload"></h5>
+      </h5>
+
+      <button onclick="reload()">Reload</button>
+    </div>
+
+    <div>
+      <h5>
+        Hello user , your current webpage url is :-
+        <h5 id="redirect"></h5>
+      </h5>
+
+      <button onclick="redirect()">Redirect</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
