@@ -267,9 +267,12 @@ var arr5 = [
 ];
 
 var filteredArr = arr5.reduce((acc, current) => {
+  console.log(acc);
   var x = acc.find(
     (item) => item.id === current.id || item.name === current.name
   );
+
+  console.log(acc);
   if (!x) {
     return acc.concat([current]);
   } else {

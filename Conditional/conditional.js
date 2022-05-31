@@ -196,8 +196,8 @@ for (let i = 1, sum = 0; i <= 5; i++) {
 //We can execute the statement 3 is in block scope
 
 for (let j = 1; j <= 5; ) {
-  console.log(j);
   j++;
+  console.log(j);
 }
 
 //While loop
@@ -270,7 +270,7 @@ for (let r = 1; r <= 10; ) {
   if (r == 6) {
     break;
   }
-  ++r;
+  r++;
   console.log(r); //23456
 }
 
