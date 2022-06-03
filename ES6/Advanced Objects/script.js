@@ -70,7 +70,7 @@ let person1 = {
   currentAge: 28,
 };
 
-let { firstName1, lastName1, middleName = " ", currentAge = 18 } = person1;
+let { firstName1, lastName1, middleName = "jh ", currentAge = 38 } = person1;
 
 console.log(firstName1, lastName1);
 console.log(middleName);

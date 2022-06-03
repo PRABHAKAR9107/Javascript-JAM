@@ -267,7 +267,7 @@ var arr5 = [
 ];
 
 var filteredArr = arr5.reduce((acc, current) => {
-  console.log(acc);
+  console.log(current);
   var x = acc.find(
     (item) => item.id === current.id || item.name === current.name
   );
