@@ -97,3 +97,18 @@ let person = [
 console.log(person[1].age);
 
 console.log(person[0]["hair"]);
+
+let person6 = person[0].hair;
+
+let person7 = person3.wave;
+
+console.log(person7);
+
+console.log(person6);
+
+function tour() {
+  return prabhakar;
+}
+console.log(tour);
+
+document.getElementById("tour").innerHTML = tour;

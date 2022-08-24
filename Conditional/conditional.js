@@ -318,3 +318,19 @@ numbers: {
 }
 
 //Give break and mention the label name.
+
+//Nested Loop
+
+// for (var u = 0; u < 2; u++) {---outer loop
+//   for (var v = 1; v < 5; v++) {           -----inner loop
+
+//     console.log(v);
+//   }
+// }68
+
+for (var x = 100; x > 10; x = x - 10) {
+  for (var y = 10; y > 4; y = y - 5) {
+    document.write(x + " divided by " + y + " equals " + x / y);
+    document.write("<br/>");
+  }
+}
