@@ -100,15 +100,15 @@ console.log(person[0]["hair"]);
 
 let person6 = person[0].hair;
 
-let person7 = person3.wave;
+let person7 = person3.wave();
 
 console.log(person7);
 
 console.log(person6);
 
-function tour() {
-  return prabhakar;
-}
-console.log(tour);
+// function tour() {
+//   return prabhakar;
+// }
+// console.log(tour);
 
-document.getElementById("tour").innerHTML = tour;
+// document.getElementById("tour").innerHTML = tour;

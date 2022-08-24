@@ -17,6 +17,9 @@ console.log(d);
 let p = 3 * Math.PI;
 console.log(p);
 
+console.log(Math.E); //The Euler's constant
+console.log(Math.LN2); //The natural logarithm of 2
+
 //Round off numbers- round() method->0.5-highest,<0.5-lowest,==0.5 -keep it as it is lower
 
 console.log(Math.round(5.5)); //5
@@ -51,6 +54,9 @@ console.log(Math.sqrt(25));
 
 console.log(Math.sqrt(2)); //1.414
 
+//Cube root
+
+console.log(Math.cbrt(8));
 //trunc:- return the integer value given the decimal numbers
 
 console.log(Math.trunc(5.36)); //5
@@ -87,3 +93,13 @@ console.log(Math.random());
 
 c = Math.floor(Math.random() * 10) + 1;
 console.log(c);
+
+//Logarithmic Methods
+
+console.log(Math.log2(2));
+
+console.log(Math.log10(100));
+
+//Trignometric method
+
+console.log(Math.sin(90));
