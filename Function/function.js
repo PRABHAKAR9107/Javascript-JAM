@@ -1,5 +1,54 @@
 "use strict";
 
+// Function Programming Paradigm
+
+//Function Statement are function declaration
+
+function statement() {
+  console.log("Function statements are function Declaration");
+}
+
+//Function Expression
+
+var expression = function () {};
+
+//Difference between fn statement and expression look hoisting
+//Anonymous Function
+
+// function () {
+
+// }
+
+//Named Function Expressions
+
+var d = function xyz() {
+  console.log("Named Function Expression");
+};
+
+//First Class Functions or first Class Citizens
+/*The ability of functions to be:
+1. Assigned to variable
+2. Passed as argument to another function
+3. Returned from another function */
+
+// 1. Assigned to variable
+
+function sayHello(param1) {
+  console.log(param1);
+}
+sayHello(function name() {});
+
+// 2.Passed as argument to another function
+function lastName() {}
+
+sayHello(lastName);
+
+// 3.Returned from another function
+
+function sayGoodbye(param1) {
+  return function xyz() {};
+}
+sayGoodbye();
 //Functions
 
 //A javascript function is a block of code that performs something, like calculations, comparisons, etc. Functions are used for a lot of purposes in programs.
