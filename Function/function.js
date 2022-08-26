@@ -12,7 +12,7 @@ function statement() {
 
 var expression = function () {};
 
-//Difference between fn statement and expression look hoisting
+//Difference between fn statement and expression look hoisting~
 //Anonymous Function
 
 // function () {
@@ -34,16 +34,19 @@ var d = function xyz() {
 // 1. Assigned to variable
 
 function sayHello(param1) {
+  return param1;
   console.log(param1);
 }
-sayHello(function name() {});
+let result = sayHello;
+let greet = result("Hi Everyone");
+console.log(greet);
 
 // 2.Passed as argument to another function
 function lastName() {}
 
 sayHello(lastName);
 
-// 3.Returned from another function
+// 3.Returned function from another function
 
 function sayGoodbye(param1) {
   return function xyz() {};
