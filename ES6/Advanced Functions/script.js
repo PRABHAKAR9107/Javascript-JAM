@@ -8,6 +8,29 @@ const sumValue = (a, b) => {
 
 console.log(sumValue(5, 4));
 
+//Higher Order Functions
+// A higher-order function is a function that has either one or both of the following characteristics:
+
+// 1.It accepts other functions as arguments
+
+function x() {
+  console.log(x);
+}
+
+function y(x) {
+  console.log(y);
+}
+//2.It returns functions when invoked
+
+function p() {
+  console.log(p);
+  return function q() {
+    console.log(q);
+  };
+}
+
+p();
+
 //Closures:- A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
 
 //A closure gives you access to an outer function's scope from an inner function.
@@ -143,7 +166,7 @@ console.log(result); //17
 
 // tip(10);
 
-//callback Function:-A callback is a function passed as an argument to another function
+//callback Function:-A callback is a function passed as an argument to another function,to be “called back” at a later time.
 
 //A callback function can run after another function has finished
 

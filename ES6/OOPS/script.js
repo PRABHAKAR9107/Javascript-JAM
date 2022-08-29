@@ -1,5 +1,39 @@
 //constructor
 
+let person = {
+  name: "prabhakar",
+  getName: function () {
+    return this.name;
+  },
+  getRollNo: function () {
+    return this.rollNo;
+  },
+};
+console.log(person);
+
+let student = {
+  rollNo: 1,
+  __proto__: person,
+};
+console.log(person);
+console.log(student.rollNo);
+console.log(student);
+console.log(student.name);
+console.log(student.getName());
+console.log(student.getRollNo());
+
+let student2 = {
+  rollNo: 2,
+  __proto__: student,
+};
+
+console.log(student2.getRollNo());
+console.log(student2.getName());
+console.log(student.getRollNo());
+
+let chars = ["Avinash"];
+console.log(chars);
+
 function User(first, last) {
   this.firstName = first;
   this.lastName = last;
@@ -129,5 +163,3 @@ Programmer.prototype.constructor = Programmer;
 
 let rohan = new Programmer("Rohan", 2, 0, "Javascript");
 console.log(rohan);
-
-let arr = ["prabhu", "rohit"];

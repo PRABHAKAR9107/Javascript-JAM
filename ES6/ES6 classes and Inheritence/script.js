@@ -24,7 +24,8 @@ class Programmer extends Employee {
     this.language = language;
     this.github = github;
   }
-
+  //Use the "super" method to call the parent's constructor function.
+  //Use the "extends" keyword to inherit all methods from another class.
   favoriteLanguage() {
     if (this.language == "python") {
       return "Python";
