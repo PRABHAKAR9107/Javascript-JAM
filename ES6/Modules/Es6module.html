@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>JavaScript modules rely on the import and export statements.</h3>
+    <summary> Export</summary>
+    <ul>
+      <li>
+        You can export a function or variable from any file.
+      </li>
+      <li>There are two types of exports: Named and Default.</li>
+    </ul>
+  </details>
+    <details>
+      <summary>Default Export</summary>
+      <ul>
+        <li>
+          Let us create another file, named message.js, and use it for
+          demonstrating default export.
+        </li>
+        <li>You can only have one default export in a file.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Import</summary>
+      <ul>
+        <li>
+          You can import modules into a file in two ways, based on if they are
+          named exports or default exports.
+        </li>
+        <li>
+          Named exports are constructed using curly braces. Default exports are
+          not.
+        </li>
+      </ul>
+    </details>
+    <h4>Modules only work with the HTTP(s) protocol.</h4>
+    <h4>
+      A web-page opened via the file:// protocol cannot use import / export.
+    </h4>
+
+    See browser console for output.
+    <script type="module">
+      import { formalGreeting } from "./greeting.js";
+      formalGreeting("Prabhakar");
+    </script>
+
+    <script type="module">
+      import { informalGreeting, formalGreeting } from "./greeting.js";
+      informalGreeting("Ram");
+      formalGreeting("Shyam");
+      import greeting from "./greeting.js";
+      greeting();
+    </script>
+  </body>
+</html>
