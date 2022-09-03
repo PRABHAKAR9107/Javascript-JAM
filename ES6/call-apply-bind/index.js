@@ -19,6 +19,7 @@ let place = function (city, country) {
   console.log(`${this.name} is from ${city} in ${country}`);
 };
 console.log(place.call(employee, "Delhi", "India"));
+console.log(employee.sayHello.call(place, "Delhi", "India"));
 
 place.apply(employee, ["Delhi", "India"]);
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      #wrap {
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+      }
+
+      #wrap > p,
+      a {
+        padding: 15px 30px;
+        display: block;
+        border: 2px solid #000;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <center>Events</center>
+
+    <button class="btn1">btn1</button>
+    <p class="first-button"></p>
+    <p class="first-button1"></p>
+
+    <button class="btn2">btn2</button>
+    <p class="second-button"></p>
+    <p class="second-button2"></p>
+
+    <details>
+      <summary>Conclusion</summary>
+      <p>
+        Event listeners and event handlers are used to handle events, such as
+        button clicks on your page. There is a subtle difference between event
+        listeners and event handlers: An object can only have one event handler
+        for a specific event but it can have multiple event listeners for the
+        event. When in doubt, prefer event listeners over event handlers.
+      </p>
+    </details>
+    <div></div>
+    <hr />
+    <div><button onclick="myFunction()">toggle</button></div>
+    <div id="myDIV">This is my DIV element.</div>
+
+    <h3>Event Propagation</h3>
+    <p>it proceed in two phases</p>
+    <ol>
+      <li>Event Capturing:- parent to child</li>
+      <li>Event Bubbling :- Child to parent</li>
+    </ol>
+
+    <div id="wrap">
+      DIV
+      <p class="hint">
+        P
+        <a href="#" id="tip">A</a>
+      </p>
+    </div>
+
+    <ul class="todo-list">
+      <li class="item">Walk your dog</li>
+      <li class="item">Drink Water</li>
+    </ul>
+
+    <p>
+      event.currentTarget tells us on which element the event was attached or
+      the element whose eventListener triggered the event. event.target tells
+      where the event started.
+    </p>
+    <script src="event.js"></script>
+  </body>
+</html>
