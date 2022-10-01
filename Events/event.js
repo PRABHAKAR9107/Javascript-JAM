@@ -40,10 +40,7 @@ document.querySelector("#wrap").addEventListener(
     console.log("bubbling1");
     console.log("target:", e.target.nodeName);
     // Output: <li class="item">Walk your dog</li>
-    console.log(
-      "================================currentTarget:",
-      e.currentTarget.nodeName
-    );
+    console.log("======currentTarget:", e.currentTarget.nodeName);
 
     e.target.value = document.querySelector("#wrap").style.color = "red";
   },
