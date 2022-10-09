@@ -60,7 +60,7 @@ p4.then((data) => {
 });
 
 Promise.all([p1, p2]).then((data) => {
-  console.log(data);
+  console.log("Data from all promise", data);
 });
 
 Promise.any([p3, p4]).then((data) => {

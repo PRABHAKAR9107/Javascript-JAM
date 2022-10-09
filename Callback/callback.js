@@ -9,8 +9,8 @@ function x() {
 }
 
 function y(callback) {
-  console.log("HOF");
   callback();
+  console.log("HOF");
 }
 
 y(x);

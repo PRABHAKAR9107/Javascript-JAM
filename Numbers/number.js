@@ -15,7 +15,7 @@ x = 5e6; //5000000
 y = 0.0000005; //5e-6 how you store very small numbers
 
 let z = 0.1 + 0.3;
-console.log(z); //0.30000000000000004
+console.log("float", z); //0.30000000000000004
 
 z = (0.1 * 10 + 0.2 * 10) / 10;
 console.log(z); //only works for addition though
@@ -153,7 +153,7 @@ console.log(h);
 
 //Exponential Method:-returns a decimal point number after converting it to exponentials, with the number of decimal points mentioned.
 
-let i = 50.4578;
+let i = 505.4578;
 
 let j = i.toExponential(2);
 
