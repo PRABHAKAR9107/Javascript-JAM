@@ -15,10 +15,10 @@ function double(x) {
 
 let number1 = [8, 9, 7, 5];
 
-let doubleValue = number1.map(double);
-// let doubleValue = number1.map(function double(x) {
-//   return x;
-// });
+// let doubleValue = number1.map(double);
+let doubleValue = number1.map(function double(x) {
+  return x;
+});
 console.log(doubleValue);
 
 //filter odd value inside the array
@@ -216,7 +216,9 @@ const posts = [
 
 const findAge = posts.reduce(function (acc, curr) {
   if (acc[curr.age]) {
+    // console.log(acc[curr.age]);
     acc[curr.age] = ++acc[curr.age];
+    console.log(acc[curr.age]);
   } else {
     acc[curr.age] = 1;
   }

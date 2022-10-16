@@ -18,4 +18,4 @@ document.cookie = "username=John Smith; expires=new Date(); path=/";
 
 //Expires the cookie
 
-// document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
